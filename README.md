@@ -25,7 +25,7 @@ WER values are percentages, averaged over three training seeds. The Learned − 
 Full statistical summaries and post-hoc analyses are in [`results/RESULTS.md`](results/RESULTS.md).
 
 ## Architecture
-![Architecture](figure/model_architecture.pdf)
+![Architecture](figure/model_architecture.png)
 
 HuBERT computes all thirteen states before fusion. The adapters operate on the saved transformer-layer outputs independently; modified states are **not** fed back into later HuBERT layers. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the two-phase view.
 
