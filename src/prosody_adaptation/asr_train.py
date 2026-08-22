@@ -117,14 +117,11 @@ def _speaker_metrics(predictions):
 def train_asr(config_path):
     experiment, model_config, base = _load_configs(config_path)
     if experiment.get("manifest_status", "frozen") != "frozen":
-        raise ValueError(
-            f"{experiment['experiment']} is blocked: freeze its corpus manifest and replace "
-            "the pending data_manifest_sha256 before training"
-        )
+        raise ValueError("Experiment requires a frozen data manifest")
     if experiment["transcript_normalization"] != TRANSCRIPT_NORMALIZATION_VERSION:
         raise ValueError(f"Paper runs require frozen policy {TRANSCRIPT_NORMALIZATION_VERSION}")
     if file_sha256(experiment["data_manifest"]) != experiment["data_manifest_sha256"]:
-        raise ValueError("Frozen paper manifest SHA-256 mismatch; do not regenerate or edit it")
+        raise ValueError("Data manifest SHA-256 mismatch")
     seed = int(experiment["seed"])
     random.seed(seed)
     np.random.seed(seed)
@@ -172,9 +169,7 @@ def train_asr(config_path):
             raise ValueError("ASR checkpoints must not contain Phase 1 normalization state")
         previous_best = Path(experiment["resume_checkpoint"]).with_name("checkpoint_best.pt")
         if not previous_best.exists():
-            raise FileNotFoundError(
-                "Resume requires checkpoint_best.pt beside checkpoint_latest.pt"
-            )
+            raise FileNotFoundError("checkpoint_best.pt not found for resumed run")
         shutil.copy2(previous_best, run_dir / "checkpoint_best.pt")
     log_path = run_dir / "training_log.jsonl"
     max_batches = experiment.get("max_train_batches")

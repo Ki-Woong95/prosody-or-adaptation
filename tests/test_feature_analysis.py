@@ -1,8 +1,8 @@
 import torch
 import pytest
 
-from prosody_adaptation.feature_analysis import (
-    ShiftedDataset,
+from prosody_adaptation.feature_analysis import ShiftedDataset
+from prosody_adaptation.residual_analysis import (
     _accumulate_layer_analysis,
     _finish_layer_analysis,
 )

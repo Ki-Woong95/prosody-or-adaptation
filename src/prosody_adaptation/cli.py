@@ -146,7 +146,7 @@ def main(argv=None):
         Path(args.markdown).write_text(markdown_report(results))
         return 0
     if args.command == "analyze-residuals":
-        from .feature_analysis import run_residual_analysis
+        from .residual_analysis import run_residual_analysis
 
         run_residual_analysis(
             args.registry,

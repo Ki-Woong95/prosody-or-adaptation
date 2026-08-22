@@ -146,9 +146,7 @@ class ProductionASR(nn.Module):
                     self.prosody_encoder, input_values, waveform_lengths
                 )
             if not torch.isfinite(prosody).all():
-                raise FloatingPointError(
-                    "ProsodyEncoder produced non-finite features; aborting before fusion"
-                )
+                raise FloatingPointError("Non-finite prosody features")
             prosody = align_prosody_to_frames(
                 prosody, prosody_lengths, frame_lengths, width
             ).to(dtype=hidden_states[0].dtype)

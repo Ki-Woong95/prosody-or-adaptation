@@ -70,11 +70,7 @@ def _validated_frame_count(item) -> int:
     observed = {name: len(item[name]) for name in TARGET_COLUMNS}
     wrong = {name: length for name, length in observed.items() if length != expected}
     if wrong:
-        raise ValueError(
-            f"Teacher targets are off the canonical Phase-1 grid: expected {expected} frames "
-            f"for {samples} samples, got {wrong}. This dataset was built with a different "
-            "framing convention; rebuild the teacher cache."
-        )
+        raise ValueError(f"canonical Phase-1 grid mismatch: expected {expected}, got {wrong}")
     return expected
 
 

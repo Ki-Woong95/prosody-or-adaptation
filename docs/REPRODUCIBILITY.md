@@ -11,7 +11,7 @@ The released YAML files define the final experimental pipeline. The paper matrix
 
 The Phase-1 encoder runs in FP32. Phase 2 may use mixed precision for trainable components.
 
-Each run writes `runtime_metadata.json` with package versions, CUDA/PyTorch information, the current Git commit, and hashes of relevant local inputs. Training metrics are recorded locally in `training_log.jsonl`; no external experiment tracker is required.
+Each run writes `runtime_metadata.json` with package versions, CUDA/PyTorch information, and hashes of relevant local inputs. The Git commit is stored separately in `git_commit.txt`. Training metrics are recorded locally in `training_log.jsonl`; no external experiment tracker is required.
 
 ## Experiment matrix
 

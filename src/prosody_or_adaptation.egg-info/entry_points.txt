@@ -1,0 +1,2 @@
+[console_scripts]
+prosody-adaptation = prosody_adaptation.cli:main
