@@ -1,0 +1,14 @@
+seed: 20260803
+split_counts:
+  train: 30
+  validation: 5
+  test: 5
+boundary_strategy: acoustic_silence_only
+max_duration_seconds: 20.0
+min_duration_seconds: 0.25
+silence_search_seconds: 4.0
+silence_window_seconds: 0.05
+silence_quantile: 0.20
+expected_sample_rate: 16000
+allow_empty_transcript_markers: false
+expected_frozen_manifest_sha256: 6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698

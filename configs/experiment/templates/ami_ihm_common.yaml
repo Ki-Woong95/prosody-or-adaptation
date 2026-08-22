@@ -1,0 +1,27 @@
+manifest_status: frozen
+data_backend: arrow_disk
+data_manifest: data/ami_ihm/manifest.json
+data_manifest_sha256: 9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7
+audio_cache: null
+transcript_normalization: conservative_apostrophe_v1
+output_root: outputs/phase2
+epochs: 50
+batch_size: 8
+gradient_accumulation_steps: 4
+learning_rate: 0.0001
+weight_decay: 0.01
+adam_betas:
+- 0.9
+- 0.98
+scheduler: none
+mixed_precision: true
+gradient_clip: 1.0
+early_stopping_patience: 10
+early_stopping_min_epochs: 15
+num_workers: 2
+pin_memory: true
+eval_every_steps: 0
+resume_checkpoint: null
+analysis:
+  gates: false
+log_every_steps: 200

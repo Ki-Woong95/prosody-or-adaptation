@@ -1,0 +1,9 @@
+{
+  "corpus": "switchboard",
+  "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+  "split_counts": {
+    "train": 185402,
+    "validation": 20601,
+    "test": 51501
+  }
+}

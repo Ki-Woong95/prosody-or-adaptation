@@ -1,0 +1,9 @@
+{
+  "corpus": "ami_ihm",
+  "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+  "split_counts": {
+    "train": 75174,
+    "validation": 9428,
+    "test": 8514
+  }
+}

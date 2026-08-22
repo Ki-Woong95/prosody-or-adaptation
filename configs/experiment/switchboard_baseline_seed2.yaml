@@ -1,0 +1,6 @@
+extends: templates/switchboard_common.yaml
+experiment: switchboard_baseline_seed2
+seed: 2
+model_config: configs/model/baseline.yaml
+prosody_checkpoint: null
+prosody_normalization_sha256: null

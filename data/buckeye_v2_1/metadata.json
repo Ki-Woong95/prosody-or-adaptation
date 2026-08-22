@@ -1,0 +1,75 @@
+{
+  "config": {
+    "allow_empty_transcript_markers": false,
+    "boundary_strategy": "acoustic_silence_only",
+    "expected_sample_rate": 16000,
+    "max_duration_seconds": 20.0,
+    "min_duration_seconds": 0.25,
+    "seed": 20260803,
+    "silence_quantile": 0.2,
+    "silence_search_seconds": 4.0,
+    "silence_window_seconds": 0.05,
+    "split_counts": {
+      "test": 5,
+      "train": 30,
+      "validation": 5
+    }
+  },
+  "format_version": 1,
+  "hours_by_split": {
+    "test": 5.063898211805553,
+    "train": 26.85834630208336,
+    "validation": 4.3539768402777765
+  },
+  "manifest_content_hash": "d5e254751dc31d0eb7abe237751ac838cecd09046662e413334e5c19de2f91c1",
+  "segment_count": 6637,
+  "speaker_count": 40,
+  "splits": {
+    "test": [
+      "s05",
+      "s10",
+      "s16",
+      "s23",
+      "s34"
+    ],
+    "train": [
+      "s01",
+      "s02",
+      "s03",
+      "s04",
+      "s07",
+      "s08",
+      "s09",
+      "s11",
+      "s12",
+      "s13",
+      "s14",
+      "s15",
+      "s17",
+      "s19",
+      "s21",
+      "s25",
+      "s26",
+      "s27",
+      "s28",
+      "s29",
+      "s30",
+      "s31",
+      "s32",
+      "s33",
+      "s35",
+      "s36",
+      "s37",
+      "s38",
+      "s39",
+      "s40"
+    ],
+    "validation": [
+      "s06",
+      "s18",
+      "s20",
+      "s22",
+      "s24"
+    ]
+  }
+}

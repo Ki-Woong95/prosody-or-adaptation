@@ -1,0 +1,955 @@
+{
+  "corpora": {
+    "ami_ihm": {
+      "comparisons": {
+        "ab3_minus_ab1": {
+          "test_wer_point_difference_by_seed": [
+            -0.7903012731332648,
+            -0.9890456761401489,
+            -0.8756444579538669
+          ],
+          "test_wer_point_difference_mean": -0.8849971357424269,
+          "test_wer_point_difference_sd": 0.09970174957343106
+        },
+        "full_minus_ab1": {
+          "test_wer_point_difference_by_seed": [
+            -0.7645814092147263,
+            -1.0884178776435882,
+            -0.7891321884096969
+          ],
+          "test_wer_point_difference_mean": -0.8807104917560038,
+          "test_wer_point_difference_sd": 0.18029823572059844
+        },
+        "full_minus_ab3": {
+          "test_wer_point_difference_by_seed": [
+            0.025719863918538532,
+            -0.09937220150343928,
+            0.08651226954417002
+          ],
+          "test_wer_point_difference_mean": 0.004286643986423089,
+          "test_wer_point_difference_sd": 0.09477761514015953
+        }
+      },
+      "conditions": {
+        "ab1": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 105300397,
+            "trainable": 10928685
+          },
+          "runs": [
+            {
+              "git_commit": "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/ami_ihm_baseline_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 1.1148231226058913,
+                "reference_words": 85537,
+                "wer": 0.3921811613687644,
+                "word_errors": 33546
+              },
+              "validation": {
+                "loss": 1.213648416386306,
+                "reference_words": 91283,
+                "wer": 0.38314910771994787,
+                "word_errors": 34975
+              }
+            },
+            {
+              "git_commit": "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/ami_ihm_baseline_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 1.3570652053039958,
+                "reference_words": 85537,
+                "wer": 0.39259034102201384,
+                "word_errors": 33581
+              },
+              "validation": {
+                "loss": 1.488603659245905,
+                "reference_words": 91283,
+                "wer": 0.38346680104729247,
+                "word_errors": 35004
+              }
+            },
+            {
+              "git_commit": "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/ami_ihm_baseline_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 1.2994687806902356,
+                "reference_words": 85537,
+                "wer": 0.38865052550358326,
+                "word_errors": 33244
+              },
+              "validation": {
+                "loss": 1.442519290503857,
+                "reference_words": 91283,
+                "wer": 0.3816482806218025,
+                "word_errors": 34838
+              }
+            }
+          ],
+          "test_wer_mean": 0.3911406759647872,
+          "test_wer_sd": 0.002166216514278728,
+          "validation_wer_mean": 0.3827547297963476,
+          "validation_wer_sd": 0.000971290170056553
+        },
+        "ab3": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 106691333,
+            "trainable": 12156741
+          },
+          "runs": [
+            {
+              "git_commit": "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/ami_ihm_null_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 1.0163991851426066,
+                "reference_words": 85537,
+                "wer": 0.38427814863743176,
+                "word_errors": 32870
+              },
+              "validation": {
+                "loss": 1.0783287670220025,
+                "reference_words": 91283,
+                "wer": 0.37793455517456703,
+                "word_errors": 34499
+              }
+            },
+            {
+              "git_commit": "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/ami_ihm_null_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 1.2852660771406872,
+                "reference_words": 85537,
+                "wer": 0.38269988426061236,
+                "word_errors": 32735
+              },
+              "validation": {
+                "loss": 1.3921678191630693,
+                "reference_words": 91283,
+                "wer": 0.3758312062486991,
+                "word_errors": 34307
+              }
+            },
+            {
+              "git_commit": "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/ami_ihm_null_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 1.5654070716648594,
+                "reference_words": 85537,
+                "wer": 0.3798940809240446,
+                "word_errors": 32495
+              },
+              "validation": {
+                "loss": 1.697792101174315,
+                "reference_words": 91283,
+                "wer": 0.3733992090531643,
+                "word_errors": 34085
+              }
+            }
+          ],
+          "test_wer_mean": 0.3822907046073629,
+          "test_wer_sd": 0.002220491706889708,
+          "validation_wer_mean": 0.3757216568254768,
+          "validation_wer_sd": 0.0022696567840373833
+        },
+        "full": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 106691333,
+            "trainable": 12156741
+          },
+          "runs": [
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/ami_ihm_learned_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 1.0388794787193127,
+                "reference_words": 85537,
+                "wer": 0.38453534727661715,
+                "word_errors": 32892
+              },
+              "validation": {
+                "loss": 1.1327931138799796,
+                "reference_words": 91283,
+                "wer": 0.3762803588839105,
+                "word_errors": 34348
+              }
+            },
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/ami_ihm_learned_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 1.3857672962154581,
+                "reference_words": 85537,
+                "wer": 0.38170616224557796,
+                "word_errors": 32650
+              },
+              "validation": {
+                "loss": 1.49315370140286,
+                "reference_words": 91283,
+                "wer": 0.3730376959565308,
+                "word_errors": 34052
+              }
+            },
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/ami_ihm_learned_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 1.511147449571342,
+                "reference_words": 85537,
+                "wer": 0.3807592036194863,
+                "word_errors": 32569
+              },
+              "validation": {
+                "loss": 1.6753145345850857,
+                "reference_words": 91283,
+                "wer": 0.37374976720747566,
+                "word_errors": 34117
+              }
+            }
+          ],
+          "test_wer_mean": 0.38233357104722715,
+          "test_wer_sd": 0.001964700125493084,
+          "validation_wer_mean": 0.374355940682639,
+          "validation_wer_sd": 0.0017042008175811687
+        }
+      },
+      "git_commits": [
+        "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+        "feac899ae2cc8b4f6aed718587431ef7e25ed354"
+      ],
+      "manifest_sha256": "9fba10cca590757d6e285fc6e6a7d51543af395ffa26cde3eb64e473e6abf9a7",
+      "prediction_pairing": {
+        "speaker_count": 16,
+        "speaker_metadata_available": true,
+        "utterance_count": 8514
+      }
+    },
+    "buckeye": {
+      "comparisons": {
+        "ab3_minus_ab1": {
+          "test_wer_point_difference_by_seed": [
+            -1.5403674442522608,
+            -1.2201393109251557,
+            -1.580103781964376
+          ],
+          "test_wer_point_difference_mean": -1.4468701790472642,
+          "test_wer_point_difference_sd": 0.19735731314863028
+        },
+        "full_minus_ab1": {
+          "test_wer_point_difference_by_seed": [
+            -1.4024589780748942,
+            -1.161703520172036,
+            -1.5684166238137565
+          ],
+          "test_wer_point_difference_mean": -1.3775263740202288,
+          "test_wer_point_difference_sd": 0.2044996655918543
+        },
+        "full_minus_ab3": {
+          "test_wer_point_difference_by_seed": [
+            0.13790846617736663,
+            0.058435790753119665,
+            0.011687158150619492
+          ],
+          "test_wer_point_difference_mean": 0.06934380502703526,
+          "test_wer_point_difference_sd": 0.06381373857991479
+        }
+      },
+      "conditions": {
+        "ab1": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 105300397,
+            "trainable": 10928685
+          },
+          "runs": [
+            {
+              "git_commit": "b395d323ba94180d773f12328cba758d741a1b14",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/buckeye_baseline_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 0.8781908828893612,
+                "reference_words": 42782,
+                "wer": 0.37249310457669116,
+                "word_errors": 15936
+              },
+              "validation": {
+                "loss": 1.28361266002059,
+                "reference_words": 29773,
+                "wer": 0.4248144291808014,
+                "word_errors": 12648
+              }
+            },
+            {
+              "git_commit": "b395d323ba94180d773f12328cba758d741a1b14",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/buckeye_baseline_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 0.8055426403880119,
+                "reference_words": 42782,
+                "wer": 0.37176850077135243,
+                "word_errors": 15905
+              },
+              "validation": {
+                "loss": 1.0406261150538922,
+                "reference_words": 29773,
+                "wer": 0.42622510328149665,
+                "word_errors": 12690
+              }
+            },
+            {
+              "git_commit": "b395d323ba94180d773f12328cba758d741a1b14",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/buckeye_baseline_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 0.805811463630405,
+                "reference_words": 42782,
+                "wer": 0.3737319433406573,
+                "word_errors": 15989
+              },
+              "validation": {
+                "loss": 1.0867030526697636,
+                "reference_words": 29773,
+                "wer": 0.4268968528532563,
+                "word_errors": 12710
+              }
+            }
+          ],
+          "test_wer_mean": 0.372664516229567,
+          "test_wer_sd": 0.0009928812349902837,
+          "validation_wer_mean": 0.42597879510518477,
+          "validation_wer_sd": 0.0010628371823514003
+        },
+        "ab3": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 106691333,
+            "trainable": 12156741
+          },
+          "runs": [
+            {
+              "git_commit": "b395d323ba94180d773f12328cba758d741a1b14",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/buckeye_null_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 0.9094216027136507,
+                "reference_words": 42782,
+                "wer": 0.35708943013416855,
+                "word_errors": 15277
+              },
+              "validation": {
+                "loss": 1.2973935310542584,
+                "reference_words": 29773,
+                "wer": 0.41023746347361706,
+                "word_errors": 12214
+              }
+            },
+            {
+              "git_commit": "b395d323ba94180d773f12328cba758d741a1b14",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/buckeye_null_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 0.7598224550742527,
+                "reference_words": 42782,
+                "wer": 0.35956710766210087,
+                "word_errors": 15383
+              },
+              "validation": {
+                "loss": 1.0156977631151676,
+                "reference_words": 29773,
+                "wer": 0.41708930910556546,
+                "word_errors": 12418
+              }
+            },
+            {
+              "git_commit": "b395d323ba94180d773f12328cba758d741a1b14",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/buckeye_null_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 0.8843403086066246,
+                "reference_words": 42782,
+                "wer": 0.35793090552101353,
+                "word_errors": 15313
+              },
+              "validation": {
+                "loss": 1.3286679542064668,
+                "reference_words": 29773,
+                "wer": 0.4114802001813724,
+                "word_errors": 12251
+              }
+            }
+          ],
+          "test_wer_mean": 0.3581958144390943,
+          "test_wer_sd": 0.0012599023907685282,
+          "validation_wer_mean": 0.41293565758685163,
+          "validation_wer_sd": 0.003650440293359955
+        },
+        "full": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 106691333,
+            "trainable": 12156741
+          },
+          "runs": [
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/buckeye_learned_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 0.8116174702500475,
+                "reference_words": 42782,
+                "wer": 0.3584685147959422,
+                "word_errors": 15336
+              },
+              "validation": {
+                "loss": 0.9850242833793164,
+                "reference_words": 29773,
+                "wer": 0.41443589829711486,
+                "word_errors": 12339
+              }
+            },
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/buckeye_learned_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 0.8590432079187755,
+                "reference_words": 42782,
+                "wer": 0.36015146556963207,
+                "word_errors": 15408
+              },
+              "validation": {
+                "loss": 1.0888194306194783,
+                "reference_words": 29773,
+                "wer": 0.41359621133241525,
+                "word_errors": 12314
+              }
+            },
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/buckeye_learned_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 0.8356090051860645,
+                "reference_words": 42782,
+                "wer": 0.3580477771025197,
+                "word_errors": 15318
+              },
+              "validation": {
+                "loss": 1.2929842741787434,
+                "reference_words": 29773,
+                "wer": 0.41624962214086586,
+                "word_errors": 12393
+              }
+            }
+          ],
+          "test_wer_mean": 0.35888925248936465,
+          "test_wer_sd": 0.001113167303986783,
+          "validation_wer_mean": 0.41476057725679866,
+          "validation_wer_sd": 0.0013561746014974037
+        }
+      },
+      "git_commits": [
+        "b395d323ba94180d773f12328cba758d741a1b14",
+        "feac899ae2cc8b4f6aed718587431ef7e25ed354"
+      ],
+      "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+      "prediction_pairing": {
+        "speaker_count": 5,
+        "speaker_metadata_available": true,
+        "utterance_count": 925
+      }
+    },
+    "switchboard": {
+      "comparisons": {
+        "ab3_minus_ab1": {
+          "test_wer_point_difference_by_seed": [
+            -0.8540764693875325,
+            -0.609747675269845,
+            -0.677275733945587
+          ],
+          "test_wer_point_difference_mean": -0.7136999595343215,
+          "test_wer_point_difference_sd": 0.12617124500477553
+        },
+        "full_minus_ab1": {
+          "test_wer_point_difference_by_seed": [
+            -0.8430264234224105,
+            -0.8074207197570238,
+            -0.761378861569012
+          ],
+          "test_wer_point_difference_mean": -0.8039420015828155,
+          "test_wer_point_difference_sd": 0.040934792038714564
+        },
+        "full_minus_ab3": {
+          "test_wer_point_difference_by_seed": [
+            0.011050045965121935,
+            -0.19767304448717882,
+            -0.08410312762342498
+          ],
+          "test_wer_point_difference_mean": -0.09024204204849395,
+          "test_wer_point_difference_sd": 0.10449687471273278
+        }
+      },
+      "conditions": {
+        "ab1": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 105300397,
+            "trainable": 10928685
+          },
+          "runs": [
+            {
+              "git_commit": "3706534842054e41617da1ecd05862500bf61902",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/switchboard_baseline_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 0.8377474397134095,
+                "reference_words": 651581,
+                "wer": 0.3204359857024683,
+                "word_errors": 208790
+              },
+              "validation": {
+                "loss": 0.8690366149248746,
+                "reference_words": 259157,
+                "wer": 0.3226345419957786,
+                "word_errors": 83613
+              }
+            },
+            {
+              "git_commit": "3706534842054e41617da1ecd05862500bf61902",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/switchboard_baseline_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 0.9422009658209751,
+                "reference_words": 651581,
+                "wer": 0.3186986729201742,
+                "word_errors": 207658
+              },
+              "validation": {
+                "loss": 0.9756777031605294,
+                "reference_words": 259157,
+                "wer": 0.3207823828798759,
+                "word_errors": 83133
+              }
+            },
+            {
+              "git_commit": "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 105300397,
+                "trainable": 10928685
+              },
+              "path": "outputs/phase2/switchboard_baseline_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 0.8887551003452546,
+                "reference_words": 651581,
+                "wer": 0.3193831618785692,
+                "word_errors": 208104
+              },
+              "validation": {
+                "loss": 0.9302353692361767,
+                "reference_words": 259157,
+                "wer": 0.32136118260359553,
+                "word_errors": 83283
+              }
+            }
+          ],
+          "test_wer_mean": 0.31950594016707057,
+          "test_wer_sd": 0.0008751398785200668,
+          "validation_wer_mean": 0.32159270249308336,
+          "validation_wer_sd": 0.0009475359845814337
+        },
+        "ab3": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 106691333,
+            "trainable": 12156741
+          },
+          "runs": [
+            {
+              "git_commit": "3706534842054e41617da1ecd05862500bf61902",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/switchboard_null_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 0.912172551357985,
+                "reference_words": 651581,
+                "wer": 0.31189522100859296,
+                "word_errors": 203225
+              },
+              "validation": {
+                "loss": 0.9854903113927044,
+                "reference_words": 259157,
+                "wer": 0.3131576611860764,
+                "word_errors": 81157
+              }
+            },
+            {
+              "git_commit": "3706534842054e41617da1ecd05862500bf61902",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/switchboard_null_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 0.8617347225484009,
+                "reference_words": 651581,
+                "wer": 0.3126011961674757,
+                "word_errors": 203685
+              },
+              "validation": {
+                "loss": 0.9262486709135741,
+                "reference_words": 259157,
+                "wer": 0.3137480369042704,
+                "word_errors": 81310
+              }
+            },
+            {
+              "git_commit": "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/switchboard_null_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 0.9080899229949658,
+                "reference_words": 651581,
+                "wer": 0.3126104045391133,
+                "word_errors": 203691
+              },
+              "validation": {
+                "loss": 0.9686842004532465,
+                "reference_words": 259157,
+                "wer": 0.3137210262504968,
+                "word_errors": 81303
+              }
+            }
+          ],
+          "test_wer_mean": 0.3123689405717273,
+          "test_wer_sd": 0.00041027901103909883,
+          "validation_wer_mean": 0.31354224144694787,
+          "validation_wer_sd": 0.0003333299816147485
+        },
+        "full": {
+          "execution_config_consistent": true,
+          "parameter_counts": {
+            "hubert_frozen": true,
+            "prosody_encoder_frozen": true,
+            "total": 106691333,
+            "trainable": 12156741
+          },
+          "runs": [
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/switchboard_learned_seed1",
+              "seed": 1,
+              "test": {
+                "loss": 0.920000572535393,
+                "reference_words": 651581,
+                "wer": 0.3120057214682442,
+                "word_errors": 203297
+              },
+              "validation": {
+                "loss": 0.983577667095052,
+                "reference_words": 259157,
+                "wer": 0.3123203309190954,
+                "word_errors": 80940
+              }
+            },
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/switchboard_learned_seed2",
+              "seed": 2,
+              "test": {
+                "loss": 0.8922620932259282,
+                "reference_words": 651581,
+                "wer": 0.31062446572260394,
+                "word_errors": 202397
+              },
+              "validation": {
+                "loss": 0.9274019015830384,
+                "reference_words": 259157,
+                "wer": 0.31236663489699296,
+                "word_errors": 80952
+              }
+            },
+            {
+              "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+              "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+              "parameter_counts": {
+                "hubert_frozen": true,
+                "prosody_encoder_frozen": true,
+                "total": 106691333,
+                "trainable": 12156741
+              },
+              "path": "outputs/phase2/switchboard_learned_seed3",
+              "seed": 3,
+              "test": {
+                "loss": 0.9353787035846365,
+                "reference_words": 651581,
+                "wer": 0.31176937326287907,
+                "word_errors": 203143
+              },
+              "validation": {
+                "loss": 0.9746448436060701,
+                "reference_words": 259157,
+                "wer": 0.3130303252468581,
+                "word_errors": 81124
+              }
+            }
+          ],
+          "test_wer_mean": 0.3114665201512424,
+          "test_wer_sd": 0.0007387535882397165,
+          "validation_wer_mean": 0.3125724303543155,
+          "validation_wer_sd": 0.000397223884043672
+        }
+      },
+      "git_commits": [
+        "3706534842054e41617da1ecd05862500bf61902",
+        "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+        "feac899ae2cc8b4f6aed718587431ef7e25ed354"
+      ],
+      "manifest_sha256": "898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1",
+      "prediction_pairing": {
+        "speaker_count": 1,
+        "speaker_metadata_available": false,
+        "utterance_count": 51501
+      }
+    }
+  },
+  "phase1": {
+    "checkpoint_sha256": "0c087fc7479321819be67ac769581c800426f61f36f65253c62bd8ea8ba45ab1",
+    "git_commit": "feac899ae2cc8b4f6aed718587431ef7e25ed354",
+    "metrics": {
+      "counts_valid_total_frames": 5825568.0,
+      "counts_valid_transition_frames": 3119684.0,
+      "counts_valid_voiced_frames": 3600389.0,
+      "delta_f0_correlation": 0.7030910040651049,
+      "delta_f0_mae": 0.006164434495172938,
+      "delta_f0_rmse": 0.011763859179098996,
+      "energy_correlation": 0.9982002455361035,
+      "energy_mae": 0.1630962181456235,
+      "energy_rmse": 0.23750233784013866,
+      "f0_cents_mae": 146.56785477618783,
+      "f0_correlation": 0.8885171520466707,
+      "f0_mae": 0.0846609141449539,
+      "f0_rmse": 0.16714319571548578,
+      "loss_delta_f0": 0.5222696216130743,
+      "loss_energy": 0.0035909389658850066,
+      "loss_f0": 0.20372108753238405,
+      "loss_tilt": 0.0033062059850412972,
+      "loss_total": 0.7676694439381969,
+      "loss_voicing": 0.29936497381755284,
+      "tilt_correlation": 0.9982754520007542,
+      "tilt_mae": 0.11211038119330698,
+      "tilt_rmse": 0.16169328172596134,
+      "voicing_f1": 0.8902886417543768,
+      "voicing_precision": 0.8761751781000053,
+      "voicing_recall": 0.9050030323360084
+    },
+    "path": "outputs/phase1/casper_prosody_encoder_seed1"
+  },
+  "phase2_git_commits": [
+    "3706534842054e41617da1ecd05862500bf61902",
+    "7b2cf0ad89f51957f5c8175e44d6b08c469807ab",
+    "b395d323ba94180d773f12328cba758d741a1b14",
+    "feac899ae2cc8b4f6aed718587431ef7e25ed354"
+  ]
+}

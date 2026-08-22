@@ -1,0 +1,14 @@
+phase1: outputs/phase1/casper_prosody_encoder_seed1
+corpora:
+  buckeye:
+    ab1: outputs/phase2/buckeye_baseline_seed{seed}
+    ab3: outputs/phase2/buckeye_null_seed{seed}
+    full: outputs/phase2/buckeye_learned_seed{seed}
+  switchboard:
+    ab1: outputs/phase2/switchboard_baseline_seed{seed}
+    ab3: outputs/phase2/switchboard_null_seed{seed}
+    full: outputs/phase2/switchboard_learned_seed{seed}
+  ami_ihm:
+    ab1: outputs/phase2/ami_ihm_baseline_seed{seed}
+    ab3: outputs/phase2/ami_ihm_null_seed{seed}
+    full: outputs/phase2/ami_ihm_learned_seed{seed}

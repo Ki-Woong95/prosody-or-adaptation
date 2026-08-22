@@ -1,0 +1,223 @@
+{
+  "corpora": {
+    "ami_ihm": {
+      "true_minus_time_shuffle": {
+        "ci95_wer_points": [
+          -0.5440239210361554,
+          -0.1399339670467789
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -0.2174497585840046,
+          "2": -0.38696704350164257,
+          "3": -0.43373043244443926
+        },
+        "difference_wer_points": -0.34604907817669545,
+        "first_condition": "true",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.006059939400605993,
+        "p_value_two_sided": 0.002019979800201998,
+        "probability_first_better": 0.999,
+        "probability_first_nonpositive": 0.999010009899901,
+        "samples": 100000,
+        "second_condition": "time_shuffle",
+        "seed_count": 3,
+        "speaker_count": 16,
+        "utterance_count": 8514
+      },
+      "true_minus_utterance_shuffle": {
+        "ci95_wer_points": [
+          -1.2657700796632791,
+          -0.7783020774296746
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -0.8522627634824695,
+          "2": -1.0323018109122368,
+          "3": -1.1585629610577879
+        },
+        "difference_wer_points": -1.0143758451508313,
+        "first_condition": "true",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.00017999820001799984,
+        "p_value_two_sided": 1.999980000199998e-05,
+        "probability_first_better": 1.0,
+        "probability_first_nonpositive": 1.0,
+        "samples": 100000,
+        "second_condition": "utterance_shuffle",
+        "seed_count": 3,
+        "speaker_count": 16,
+        "utterance_count": 8514
+      },
+      "true_minus_zero": {
+        "ci95_wer_points": [
+          -14.475919763567632,
+          -10.810743072506362
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -10.692448881770462,
+          "2": -13.490068625273274,
+          "3": -14.140079731578147
+        },
+        "difference_wer_points": -12.774199079540628,
+        "first_condition": "true",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.00017999820001799984,
+        "p_value_two_sided": 1.999980000199998e-05,
+        "probability_first_better": 1.0,
+        "probability_first_nonpositive": 1.0,
+        "samples": 100000,
+        "second_condition": "zero",
+        "seed_count": 3,
+        "speaker_count": 16,
+        "utterance_count": 8514
+      }
+    },
+    "buckeye": {
+      "true_minus_time_shuffle": {
+        "ci95_wer_points": [
+          -0.3794577772141232,
+          0.019715085211794388
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -0.23374316301248188,
+          "2": -0.1495956243279884,
+          "3": -0.11219671824599131
+        },
+        "difference_wer_points": -0.16517850186215385,
+        "first_condition": "true",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.07557924420755792,
+        "p_value_two_sided": 0.07557924420755792,
+        "probability_first_better": 0.96222,
+        "probability_first_nonpositive": 0.9630003699963,
+        "samples": 100000,
+        "second_condition": "time_shuffle",
+        "seed_count": 3,
+        "speaker_count": 5,
+        "utterance_count": 925
+      },
+      "true_minus_utterance_shuffle": {
+        "ci95_wer_points": [
+          -0.7559165546067113,
+          -0.13343536415600007
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -0.5633210228600813,
+          "2": -0.46748632602496376,
+          "3": -0.2360805946426067
+        },
+        "difference_wer_points": -0.42229598117588396,
+        "first_condition": "true",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.006059939400605993,
+        "p_value_two_sided": 0.002939970600293997,
+        "probability_first_better": 0.99854,
+        "probability_first_nonpositive": 0.998630013699863,
+        "samples": 100000,
+        "second_condition": "utterance_shuffle",
+        "seed_count": 3,
+        "speaker_count": 5,
+        "utterance_count": 925
+      },
+      "true_minus_zero": {
+        "ci95_wer_points": [
+          -5.846896825028587,
+          -3.843880041299666
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -4.581365995044645,
+          "2": -4.3803468748539105,
+          "3": -5.593473890888691
+        },
+        "difference_wer_points": -4.851728920262416,
+        "first_condition": "true",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.00017999820001799984,
+        "p_value_two_sided": 1.999980000199998e-05,
+        "probability_first_better": 1.0,
+        "probability_first_nonpositive": 1.0,
+        "samples": 100000,
+        "second_condition": "zero",
+        "seed_count": 3,
+        "speaker_count": 5,
+        "utterance_count": 925
+      }
+    },
+    "switchboard": {
+      "true_minus_time_shuffle": {
+        "ci95_wer_points": [
+          -0.34618656845918977,
+          -0.25265290468907636
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -0.32428815450419823,
+          "2": -0.26612194032668235,
+          "3": -0.30863392272027573
+        },
+        "difference_wer_points": -0.29968133918371875,
+        "first_condition": "true",
+        "method": "paired seed-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.00017999820001799984,
+        "p_value_two_sided": 1.999980000199998e-05,
+        "probability_first_better": 1.0,
+        "probability_first_nonpositive": 1.0,
+        "samples": 100000,
+        "second_condition": "time_shuffle",
+        "seed_count": 3,
+        "speaker_count": null,
+        "utterance_count": 51501
+      },
+      "true_minus_utterance_shuffle": {
+        "ci95_wer_points": [
+          -1.1930198015548708,
+          -0.9326743339848929
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -1.0658690170523695,
+          "2": -1.1881868869718424,
+          "3": -0.9328080468890284
+        },
+        "difference_wer_points": -1.0622879836377468,
+        "first_condition": "true",
+        "method": "paired seed-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.00017999820001799984,
+        "p_value_two_sided": 1.999980000199998e-05,
+        "probability_first_better": 1.0,
+        "probability_first_nonpositive": 1.0,
+        "samples": 100000,
+        "second_condition": "utterance_shuffle",
+        "seed_count": 3,
+        "speaker_count": null,
+        "utterance_count": 51501
+      },
+      "true_minus_zero": {
+        "ci95_wer_points": [
+          -17.561439457493933,
+          -16.128362803528486
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -17.585380789188143,
+          "2": -16.097154459691122,
+          "3": -17.121892750095537
+        },
+        "difference_wer_points": -16.934809332991602,
+        "first_condition": "true",
+        "method": "paired seed-utterance Poisson bootstrap",
+        "p_value_holm_exploratory": 0.00017999820001799984,
+        "p_value_two_sided": 1.999980000199998e-05,
+        "probability_first_better": 1.0,
+        "probability_first_nonpositive": 1.0,
+        "samples": 100000,
+        "second_condition": "zero",
+        "seed_count": 3,
+        "speaker_count": null,
+        "utterance_count": 51501
+      }
+    }
+  },
+  "family": "exploratory",
+  "family_size": 9,
+  "note": "Exploratory within-model contrasts. Holm correction spans all corpora and contrasts jointly. A p-value above 0.05 is not evidence of no effect; read the effect size and interval.",
+  "random_seed": 42,
+  "samples": 100000,
+  "source_analysis": "results/feature_interventions.json"
+}

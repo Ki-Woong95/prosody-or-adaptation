@@ -1,0 +1,2 @@
+condition: full
+base_config: configs/model/base.yaml

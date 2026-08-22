@@ -1,0 +1,9 @@
+{
+  "boundary_policy": "acoustic_silence_only_before_word_assignment",
+  "frozen": true,
+  "frozen_date": "2026-08-03",
+  "manifest_sha256": "6a90195dec1d3000eea714e206bbae416a7688d4cf571b73984e6df05b879698",
+  "segment_count": 6637,
+  "speaker_assignment_changed_from_v2": false,
+  "status": "official_paper_manifest"
+}

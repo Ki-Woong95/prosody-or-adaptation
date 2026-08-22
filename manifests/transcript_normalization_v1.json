@@ -1,0 +1,36 @@
+{
+  "approved": true,
+  "applicable_corpora": ["buckeye", "switchboard", "ami"],
+  "buckeye_v2_1_audit": {
+    "changed_source_token_occurrences": 1074,
+    "changed_source_token_types": 49,
+    "changed_transcripts": 801,
+    "curly_or_variant_apostrophe_characters": 0,
+    "empty_transcripts_after_normalization": 0,
+    "removed_character_occurrences": {
+      "hyphen": 1064,
+      "period": 4,
+      "question_mark": 6,
+      "equals_sign": 8
+    },
+    "representative_examples": [
+      {"before": "um-hum", "after": "um hum", "occurrences": 903},
+      {"before": "mm-hmm", "after": "mm hmm", "occurrences": 53},
+      {"before": "uh-huh", "after": "uh huh", "occurrences": 40},
+      {"before": "it?", "after": "it", "occurrences": 2},
+      {"before": "peopuh=people", "after": "peopuh people", "occurrences": 1},
+      {"before": "it's", "after": "it's", "note": "lexical apostrophe preserved"},
+      {"before": "don't", "after": "don't", "note": "contraction preserved, not expanded"},
+      {"before": "I’m", "after": "i'm", "note": "curly apostrophe mapping rule"}
+    ]
+  },
+  "name": "conservative_apostrophe_v1",
+  "rules_in_order": [
+    "Apply Unicode lowercase without lexical substitution.",
+    "Map RIGHT SINGLE QUOTATION MARK U+2019, GRAVE ACCENT U+0060, and ACUTE ACCENT U+00B4 to ASCII APOSTROPHE U+0027.",
+    "Preserve ASCII letters a-z, digits 0-9, ASCII apostrophe, and whitespace; map every other character sequence to a space.",
+    "Collapse whitespace runs and remove leading and trailing whitespace.",
+    "Do not expand contractions, interpret grammar, or rewrite words."
+  ],
+  "version": 1
+}

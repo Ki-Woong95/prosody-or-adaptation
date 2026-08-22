@@ -1,0 +1,27 @@
+manifest_status: frozen
+data_backend: arrow_disk
+data_manifest: data/switchboard/manifest.json
+data_manifest_sha256: 898fe8e95cc5bcea4a966f9ccc25d95d3009236abca02c933e288428664c5db1
+audio_cache: null
+transcript_normalization: conservative_apostrophe_v1
+output_root: outputs/phase2
+epochs: 30
+batch_size: 8
+gradient_accumulation_steps: 4
+learning_rate: 0.0001
+weight_decay: 0.01
+adam_betas:
+- 0.9
+- 0.98
+scheduler: none
+mixed_precision: true
+gradient_clip: 1.0
+early_stopping_patience: 10
+early_stopping_min_epochs: 10
+num_workers: 2
+pin_memory: true
+eval_every_steps: 0
+resume_checkpoint: null
+analysis:
+  gates: false
+log_every_steps: 200

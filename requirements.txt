@@ -1,0 +1,8 @@
+numpy==1.25.2
+packaging==25.0
+PyYAML==6.0.2
+torch==2.6.0
+torchaudio==2.6.0
+transformers==4.56.2
+datasets==2.21.0
+soundfile==0.12.1

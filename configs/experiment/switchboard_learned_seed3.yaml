@@ -1,0 +1,6 @@
+extends: templates/switchboard_common.yaml
+experiment: switchboard_learned_seed3
+seed: 3
+model_config: configs/model/learned.yaml
+prosody_checkpoint: outputs/phase1/casper_prosody_encoder_seed1/checkpoint_best.pt
+prosody_normalization_sha256: 3c9fbec1aed66984a2f7f28eee58d7da2fc21072d0ebce41b468aea857504463

@@ -1,0 +1,52 @@
+corpus: casper
+sample_rate: 16000
+hop_length: 320
+window_length: 800
+n_mels: 80
+log_epsilon: 1.0e-6
+frame_grid:
+  name: canonical_student_grid
+  mel_center: false
+  frame_centre_samples: j * hop_length + window_length / 2
+  frame_count: (samples - window_length) // hop_length + 1
+  note: >
+    v1 used mel center=True (frame j centred at j*hop) while the student's
+    LogMelFrontend uses center=False (frame j centred at j*hop + win/2), so
+    teacher supervision led the student by 25 ms and was 3 frames longer on a
+    15 s chunk. v2 puts the teacher mel on the student grid; the two transforms
+    are now bitwise identical.
+crepe:
+  package: torchcrepe
+  version: 0.0.24
+  model: tiny
+  decoder: viterbi
+  device: cuda
+  batch_size: 512
+  f0_min_hz: 50.0
+  f0_max_hz: 500.0
+  pad: true
+  native_frame_centre_samples: j * hop_length
+  resampled_to_canonical_grid: true
+  crepe_frame_offset: 1.25
+  resampling: linear interpolation of CREPE position j + 1.25 for canonical frame j
+periodicity:
+  median_filter_width: 3
+  median_filter_grid: native_crepe
+  threshold: 0.01
+energy_percentile: 20
+split:
+  validation_fraction: 0.20
+  seed: 42
+outputs:
+  train_dataset_hash: bc84ddbe0bb1a8deaa0b40cf7b420aada7992e3aa8d8f6d426240d18729aa2db
+  validation_dataset_hash: 299271f27412128422e7dd9764b27e6d2ac5084a419b3b489dde1d10ea25b43a
+reproduction:
+  exact_targets:
+    - voiced
+    - periodicity
+    - log_energy
+    - spectral_tilt
+  nondeterministic_targets:
+    - log_f0
+    - delta_log_f0
+  note: CUDA CREPE with Viterbi decoding produced run-to-run F0 differences.

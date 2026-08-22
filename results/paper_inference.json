@@ -1,0 +1,156 @@
+{
+  "corpora": {
+    "ami_ihm": {
+      "ab3_minus_ab1": {
+        "ci95_wer_points": [
+          -1.2378841438300037,
+          -0.540671361600434
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -0.7903012731332639,
+          "2": -0.9890456761401499,
+          "3": -0.8756444579538679
+        },
+        "difference_wer_points": -0.8849971357424272,
+        "family": "secondary",
+        "first_condition": "ab3",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm": 5.999940000599994e-05,
+        "p_value_two_sided": 3.999960000399996e-05,
+        "probability_first_better": 0.99999,
+        "probability_first_nonpositive": 0.999990000099999,
+        "samples": 100000,
+        "second_condition": "ab1",
+        "seed_count": 3,
+        "speaker_count": 16,
+        "utterance_count": 8514
+      },
+      "full_minus_ab3": {
+        "ci95_wer_points": [
+          -0.26861709267811146,
+          0.2750994471491312
+        ],
+        "difference_by_seed_wer_points": {
+          "1": 0.025719863918538175,
+          "2": -0.09937220150344296,
+          "3": 0.08651226954417386
+        },
+        "difference_wer_points": 0.00428664398642303,
+        "family": "primary",
+        "first_condition": "full",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm": 1.0,
+        "p_value_two_sided": 0.9490105098949011,
+        "probability_first_better": 0.47316,
+        "probability_first_nonpositive": 0.47450525494745055,
+        "samples": 100000,
+        "second_condition": "ab3",
+        "seed_count": 3,
+        "speaker_count": 16,
+        "utterance_count": 8514
+      }
+    },
+    "buckeye": {
+      "ab3_minus_ab1": {
+        "ci95_wer_points": [
+          -1.9292847427087063,
+          -0.9420392233802557
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -1.5403674442522557,
+          "2": -1.2201393109251555,
+          "3": -1.5801037819643775
+        },
+        "difference_wer_points": -1.446870179047263,
+        "family": "secondary",
+        "first_condition": "ab3",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm": 5.999940000599994e-05,
+        "p_value_two_sided": 1.999980000199998e-05,
+        "probability_first_better": 1.0,
+        "probability_first_nonpositive": 1.0,
+        "samples": 100000,
+        "second_condition": "ab1",
+        "seed_count": 3,
+        "speaker_count": 5,
+        "utterance_count": 925
+      },
+      "full_minus_ab3": {
+        "ci95_wer_points": [
+          -0.22159960977076873,
+          0.34092761060009
+        ],
+        "difference_by_seed_wer_points": {
+          "1": 0.13790846617736433,
+          "2": 0.05843579075312047,
+          "3": 0.011687158150624094
+        },
+        "difference_wer_points": 0.0693438050270363,
+        "family": "primary",
+        "first_condition": "full",
+        "method": "paired seed-speaker-utterance Poisson bootstrap",
+        "p_value_holm": 1.0,
+        "p_value_two_sided": 0.6164738352616473,
+        "probability_first_better": 0.30591,
+        "probability_first_nonpositive": 0.30823691763082367,
+        "samples": 100000,
+        "second_condition": "ab3",
+        "seed_count": 3,
+        "speaker_count": 5,
+        "utterance_count": 925
+      }
+    },
+    "switchboard": {
+      "ab3_minus_ab1": {
+        "ci95_wer_points": [
+          -0.8547554358143318,
+          -0.5838779738231961
+        ],
+        "difference_by_seed_wer_points": {
+          "1": -0.8540764693875359,
+          "2": -0.6097476752698436,
+          "3": -0.6772757339455877
+        },
+        "difference_wer_points": -0.7136999595343224,
+        "family": "secondary",
+        "first_condition": "ab3",
+        "method": "paired seed-utterance Poisson bootstrap",
+        "p_value_holm": 5.999940000599994e-05,
+        "p_value_two_sided": 1.999980000199998e-05,
+        "probability_first_better": 1.0,
+        "probability_first_nonpositive": 1.0,
+        "samples": 100000,
+        "second_condition": "ab1",
+        "seed_count": 3,
+        "speaker_count": null,
+        "utterance_count": 51501
+      },
+      "full_minus_ab3": {
+        "ci95_wer_points": [
+          -0.20899393920657588,
+          0.02693879517089663
+        ],
+        "difference_by_seed_wer_points": {
+          "1": 0.011050045965121758,
+          "2": -0.19767304448717812,
+          "3": -0.08410312762342671
+        },
+        "difference_wer_points": -0.09024204204849436,
+        "family": "primary",
+        "first_condition": "full",
+        "method": "paired seed-utterance Poisson bootstrap",
+        "p_value_holm": 0.40007599924000764,
+        "p_value_two_sided": 0.13335866641333588,
+        "probability_first_better": 0.93333,
+        "probability_first_nonpositive": 0.933420665793342,
+        "samples": 100000,
+        "second_condition": "ab3",
+        "seed_count": 3,
+        "speaker_count": null,
+        "utterance_count": 51501
+      }
+    }
+  },
+  "random_seed": 42,
+  "samples": 100000
+}

@@ -1,0 +1,2 @@
+condition: ab3
+base_config: configs/model/base.yaml

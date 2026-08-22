@@ -1,0 +1,6 @@
+extends: templates/ami_ihm_common.yaml
+experiment: ami_ihm_baseline_seed2
+seed: 2
+model_config: configs/model/baseline.yaml
+prosody_checkpoint: null
+prosody_normalization_sha256: null

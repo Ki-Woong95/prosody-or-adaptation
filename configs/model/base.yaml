@@ -1,0 +1,10 @@
+hubert_model: facebook/hubert-base-ls960
+hubert_revision: dba3bb02fda4248b6e082697eee756de8fe8aa8a
+processor_model: facebook/wav2vec2-base-960h
+processor_revision: 22aad52d435eb6dbaf354bdad9b0da84ce7d6156
+hidden_dim: 768
+prosody_dim: 64
+project_dim: 512
+blstm_hidden: 512
+blstm_layers: 2
+dropout: 0.1

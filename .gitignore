@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Licensed corpora and local caches.
+/data/*
+!data/buckeye_v2_1/
+!data/buckeye_v2_1/FROZEN.json
+!data/buckeye_v2_1/metadata.json
+!data/switchboard/
+!data/switchboard/FROZEN.json
+!data/ami_ihm/
+!data/ami_ihm/FROZEN.json
+
+# Training outputs and checkpoints.
+outputs/
+*.pt
+*.wav
+
+# Per-utterance analysis records may contain corpus transcripts.
+results/interventions/

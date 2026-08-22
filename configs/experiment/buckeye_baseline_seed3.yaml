@@ -1,0 +1,6 @@
+extends: templates/buckeye_common.yaml
+experiment: buckeye_baseline_seed3
+seed: 3
+model_config: configs/model/baseline.yaml
+prosody_checkpoint: null
+prosody_normalization_sha256: null
