@@ -25,23 +25,7 @@ WER values are percentages, averaged over three training seeds. The Learned − 
 Full statistical summaries and post-hoc analyses are in [`results/RESULTS.md`](results/RESULTS.md).
 
 ## Architecture
-
-```mermaid
-flowchart LR
-    A[16 kHz waveform] --> H[Frozen HuBERT-base]
-    A --> P[Frozen prosody encoder]
-    H --> S[Saved states h0 ... h12]
-    P --> R[64-D representation]
-    S --> C{Condition}
-    R --> C
-    C -->|Baseline| W[Learned layer-weighted sum]
-    C -->|Null: p = 0| F[12 post-hoc adapters]
-    C -->|Learned: p| F
-    F --> W
-    W --> B[768 -> 512 projection]
-    B --> L[2-layer BiLSTM]
-    L --> O[CTC output]
-```
+![Architecture](figure/model_architecture.pdf)
 
 HuBERT computes all thirteen states before fusion. The adapters operate on the saved transformer-layer outputs independently; modified states are **not** fed back into later HuBERT layers. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the two-phase view.
 
