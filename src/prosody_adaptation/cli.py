@@ -78,6 +78,14 @@ def build_parser():
     residuals.add_argument("--corpus", choices=("buckeye", "switchboard", "ami_ihm"))
     residuals.add_argument("--seed", type=int, choices=(1, 2, 3), action="append")
     residuals.add_argument("--batch-size", type=int)
+    transfer = commands.add_parser("evaluate-prosody-transfer")
+    transfer.add_argument("--registry", default="configs/results/paper_runs.yaml")
+    transfer.add_argument("--checkpoint", required=True)
+    transfer.add_argument("--output", default="results/phase1_cross_corpus.json")
+    transfer.add_argument("--device", choices=("cpu", "cuda"), default="cuda")
+    transfer.add_argument("--batch-size", type=int, default=32)
+    transfer.add_argument("--corpus", choices=("buckeye", "switchboard", "ami_ihm"))
+    transfer.add_argument("--max-items", type=int)
     return parser
 
 
@@ -156,6 +164,19 @@ def main(argv=None):
             corpus_filter=args.corpus,
             seeds=tuple(args.seed or (1, 2, 3)),
             batch_size=args.batch_size,
+        )
+        return 0
+    if args.command == "evaluate-prosody-transfer":
+        from .phase1_transfer import evaluate_phase1_transfer
+
+        evaluate_phase1_transfer(
+            args.registry,
+            args.checkpoint,
+            args.output,
+            device=args.device,
+            batch_size=args.batch_size,
+            corpus_filter=args.corpus,
+            max_items=args.max_items,
         )
         return 0
     config = Path(args.config)

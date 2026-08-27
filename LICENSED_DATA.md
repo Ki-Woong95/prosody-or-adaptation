@@ -30,4 +30,4 @@ The fixed Arrow datasets and transcript-bearing manifests used in the experiment
 
 ## Generated outputs
 
-`outputs/` is intentionally ignored. It may contain checkpoints, resolved configurations, per-utterance predictions, and logs. Likewise, `results/interventions/` is ignored because intervention records may contain verbatim corpus transcripts.
+`outputs/` is intentionally ignored. It may contain checkpoints, resolved configurations, per-utterance predictions, and logs. Likewise, `results/interventions/` is ignored because intervention records may contain verbatim corpus transcripts. Cross-corpus Phase-1 `*.progress.jsonl` files are also ignored because they contain corpus segment identifiers; only aggregate metrics are released.

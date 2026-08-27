@@ -105,6 +105,8 @@ prosody-adaptation infer
 prosody-adaptation analyze-features
 prosody-adaptation infer-interventions
 prosody-adaptation analyze-residuals
+prosody-adaptation evaluate-prosody-transfer \
+  --checkpoint outputs/phase1/casper_prosody_encoder_seed1/checkpoint_best.pt
 ```
 
 The run registry is [`configs/results/paper_runs.yaml`](configs/results/paper_runs.yaml). Statistical inference uses paired test predictions with hierarchical Poisson bootstrap resampling and Holm correction as described in the paper.

@@ -29,6 +29,21 @@ The selected CASPER checkpoint achieves:
 
 These metrics establish that the encoder learned its supervision targets; they do not imply that its 64-D hidden representation contains only prosodic information.
 
+The same frozen checkpoint was also evaluated against newly extracted teacher
+targets on the three Phase-2 validation corpora:
+
+| Validation corpus | Utterances | Total loss | F0 cents MAE | Voicing F1 | ΔF0 RMSE | Energy RMSE | Tilt RMSE |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| CASPER | 7,824 | 0.768 | 146.57 | 0.890 | 0.0118 | 0.238 | 0.162 |
+| Buckeye | 797 | 1.006 | 194.61 | 0.882 | 0.0126 | 0.267 | 0.176 |
+| Switchboard | 20,601 | 0.963 | 184.38 | 0.864 | 0.0114 | 0.297 | 0.179 |
+| AMI IHM | 9,428 | 0.684 | 56.33 | 0.880 | 0.0097 | 0.341 | 0.238 |
+
+This is a cross-corpus teacher-agreement diagnostic, not an evaluation against
+independent ground-truth prosody. All losses use the CASPER training
+normalization. Full metrics and provenance are in
+[`phase1_cross_corpus.md`](phase1_cross_corpus.md).
+
 ## Feature interventions
 
 The trained Learned model is re-evaluated without retraining after modifying its auxiliary representation. Values below are WER increases relative to the unmodified Learned condition.
@@ -60,3 +75,4 @@ This is consistent with the recognition results: the zero-input control is not a
 - `feature_interventions.json`: test-time feature interventions
 - `intervention_inference.json`: paired inference for intervention contrasts
 - `residual_analysis.json`: layerwise gate and residual statistics
+- `phase1_cross_corpus.json`: Phase-1 teacher-target agreement on Phase-2 validation corpora

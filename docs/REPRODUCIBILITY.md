@@ -35,6 +35,8 @@ prosody-adaptation infer
 prosody-adaptation analyze-features
 prosody-adaptation infer-interventions
 prosody-adaptation analyze-residuals
+prosody-adaptation evaluate-prosody-transfer \
+  --checkpoint outputs/phase1/casper_prosody_encoder_seed1/checkpoint_best.pt
 ```
 
 `summarize-results` computes seed-level WER summaries. `infer` uses paired test predictions and a hierarchical Poisson bootstrap; speaker resampling is used for Buckeye and AMI IHM, while Switchboard uses seed-utterance resampling because usable speaker labels are not present in the stored predictions. Holm correction is applied separately to the three Learned−Null tests and the three Null−Baseline tests.
@@ -42,6 +44,14 @@ prosody-adaptation analyze-residuals
 Feature interventions evaluate the trained Learned checkpoints with the original representation, zeros, within-utterance time shuffling, and a representation from another utterance. These are post-hoc diagnostics and should not be interpreted as replacements for the separately trained Null condition.
 
 `analyze-residuals` reports padding-masked layerwise gate and residual statistics for the Learned and Null checkpoints.
+
+`evaluate-prosody-transfer` evaluates the frozen Phase-1 checkpoint against
+newly extracted CREPE-tiny targets on each registered Phase-2 validation split.
+It fixes target normalization to the CASPER training statistics and writes
+resumable batch progress beside the output JSON. The released aggregate result
+is `results/phase1_cross_corpus.json`; the progress file is excluded because it
+contains corpus segment identifiers. This analysis measures agreement with the
+distillation teacher, not independent ground-truth prosody.
 
 ## Licensed inputs
 
