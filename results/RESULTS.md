@@ -63,8 +63,8 @@ Both Null and Learned produce substantial residual modifications of frozen HuBER
 | Corpus | Learned | Null |
 |---|---:|---:|
 | Buckeye | 0.249 | 0.351 |
-| Switchboard | 0.527 | 0.825 |
-| AMI IHM | 0.673 | 1.091 |
+| Switchboard | 0.526 | 0.825 |
+| AMI IHM | 0.672 | 1.091 |
 
 This is consistent with the recognition results: the zero-input control is not an inactive adapter. It learns a substantial transformation of the frozen representation.
 
