@@ -99,12 +99,14 @@ Representative mappings include:
 
 | Released checkpoint | Current implementation |
 | --- | --- |
+| `encoder.frontend.mel.*` | `encoder.frontend.transform.*` |
 | `encoder.input_proj.*` | `encoder.input_projection.*` |
 | `encoder.cnn.*` | `encoder.convolution.*` |
 | `encoder.bigru.*` | `encoder.recurrent.gru.*` |
 | `encoder.out_proj.*` | `encoder.output_projection.*` |
+| `encoder.voicing_head.*` | `heads.voicing_logits.*` |
 | `f0_head.*` | `heads.log_f0.*` |
-| `delta_f0_head.*` | `heads.delta_log_f0.*` |
+| `delta_f0_head.*` | `heads.delta_f0.*` |
 | `energy_head.*` | `heads.energy.*` |
 | `tilt_head.*` | `heads.tilt.*` |
 
