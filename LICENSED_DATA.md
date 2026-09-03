@@ -1,7 +1,6 @@
 # Licensed data
 
-This repository does not redistribute corpus audio, verbatim transcripts, checkpoints trained on licensed speech, or per-utterance prediction files that contain transcript text.
-
+This repository does not redistribute corpus audio, verbatim transcripts, Phase-2 checkpoints trained on licensed speech, or per-utterance prediction files that contain transcript text. The Phase-1 CASPER prosody encoder is released separately on Hugging Face under CC BY-NC-SA 4.0.
 ## Public metadata
 
 The repository includes only information needed to identify the frozen experimental inputs without reconstructing the corpora:
