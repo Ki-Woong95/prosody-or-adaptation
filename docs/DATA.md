@@ -31,7 +31,7 @@ Regenerate the licensed manifest locally with `prosody-adaptation prepare buckey
 
 ## Phase 2: Switchboard and AMI IHM
 
-The paper uses fixed local Arrow splits for Switchboard and AMI IHM. Because those datasets and transcript-bearing manifests cannot be redistributed, the public repository includes only frozen descriptors with the expected manifest hashes and split sizes.
+The paper uses fixed local Arrow splits for Switchboard (Original data from:[Ho et al. 2005](https://www.isca-archive.org/interspeech_2025/ho25b_interspeech.html) and AMI IHM. Because those datasets and transcript-bearing manifests cannot be redistributed, the public repository includes only frozen descriptors with the expected manifest hashes and split sizes.
 
 Expected local manifest paths are:
 

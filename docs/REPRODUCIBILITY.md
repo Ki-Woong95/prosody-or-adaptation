@@ -21,7 +21,7 @@ Paper-facing config names use:
 {corpus}_{baseline|null|learned}_seed{1|2|3}.yaml
 ```
 
-where the internal condition IDs `ab1`, `ab3`, and `full` are retained for compatibility with the analysis code.
+where the internal condition IDs `ab1` for baseline, `ab3` for Null, and `full` for Learned are retained for compatibility with the analysis code.
 
 The run registry is `configs/results/paper_runs.yaml`.
 

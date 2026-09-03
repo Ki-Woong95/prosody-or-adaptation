@@ -38,9 +38,9 @@ HuBERT produces all hidden states before any adapter is applied. Each transforme
 
 ### Conditions
 
-- **Baseline (AB1):** no adapters.
-- **Null (AB3):** all twelve adapters are present, but the auxiliary input is fixed to zero.
-- **Learned (Full):** the same adapters receive the frozen 64-D representation.
+- **Baseline:** no adapters.
+- **Null:** all twelve adapters are present, but the auxiliary input is fixed to zero.
+- **Learned:** the same adapters receive the frozen 64-D representation.
 
 Only Null and Learned are parameter matched. The Learned−Null contrast isolates the incremental value of the auxiliary representation; Null−Baseline measures the effect of adding the trainable adaptation pathway.
 
