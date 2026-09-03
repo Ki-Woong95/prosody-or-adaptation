@@ -24,3 +24,6 @@ results/interventions/
 
 # Resumable cross-corpus evaluation progress contains corpus segment IDs.
 results/*.progress.jsonl
+
+
+*.egg-info/
