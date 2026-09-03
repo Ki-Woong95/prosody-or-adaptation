@@ -6,9 +6,9 @@ The project asks whether a prosody-trained auxiliary representation improves spo
 
 We compare three systems:
 
-- **Baseline (AB1):** learned aggregation over frozen HuBERT states, with no post-hoc adapters.
-- **Null (AB3):** the full adapter pathway, but its 64-D auxiliary input is fixed to zero throughout training and inference.
-- **Learned (Full):** the same parameter-matched adapter pathway supplied with a frozen 64-D prosody-trained representation.
+- **Baseline:** learned aggregation over frozen HuBERT states, with no post-hoc adapters.
+- **Null:** the full adapter pathway, but its 64-D auxiliary input is fixed to zero throughout training and inference.
+- **Learned:** the same parameter-matched adapter pathway supplied with a frozen 64-D prosody-trained representation.
 
 The primary comparison is **Learned − Null**. This holds the adapter architecture and trainable parameter count fixed and changes only the auxiliary representation.
 
@@ -76,13 +76,43 @@ The regenerated `data/buckeye_v2_1/manifest.jsonl` must match the SHA-256 stored
 ## Reproducing the experiments
 
 ### Phase 1: prosody-trained encoder
-
-```bash
+```
 export PROSODY_ADAPTATION_CASPER_ROOT=/path/to/CASPER/teacher_cache
 prosody-adaptation train-prosody --config configs/experiment/prosody_casper.yaml
 ```
+Phase 1 predicts five frame-level targets: log F0, voicing, Δlog F0,
+log energy, and spectral tilt. Only the 64-D hidden representation
+before the prediction heads is used in Phase 2.
 
-Phase 1 predicts five frame-level targets: log F0, voicing, Δlog F0, log energy, and spectral tilt. Only the 64-D hidden representation before the prediction heads is used in Phase 2.
+#### Pretrained Phase-1 checkpoint
+
+The Phase-1 prosody encoder checkpoint used in the reported Phase-2
+experiments is available on
+[Hugging Face](https://huggingface.co/Ki-Woong95/prosody-adaptation-encoder).
+
+The released checkpoint is the original experimental artifact and is
+provided without modification. It was produced with an earlier version
+of the Phase-1 implementation. The model architecture is unchanged,
+but some parameter names differ from those in the current source tree.
+
+Representative mappings include:
+
+| Released checkpoint | Current implementation |
+| --- | --- |
+| `encoder.input_proj.*` | `encoder.input_projection.*` |
+| `encoder.cnn.*` | `encoder.convolution.*` |
+| `encoder.bigru.*` | `encoder.recurrent.gru.*` |
+| `encoder.out_proj.*` | `encoder.output_projection.*` |
+| `f0_head.*` | `heads.log_f0.*` |
+| `delta_f0_head.*` | `heads.delta_log_f0.*` |
+| `energy_head.*` | `heads.energy.*` |
+| `tilt_head.*` | `heads.tilt.*` |
+
+Accordingly, the released checkpoint should not be passed directly to
+the current model with a strict `load_state_dict()` call without first
+remapping the legacy parameter names. The original checkpoint, training
+configuration, and SHA-256 checksum are preserved on Hugging Face for
+provenance and reproducibility.
 
 ### Phase 2: ASR
 
